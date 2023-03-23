@@ -1,25 +1,14 @@
 #include"main.h"
-/*
- *_isdigit -  checks for a digit (0 through 9).
- *Retuurn: i if number is a digit otherwise
- *Return:0
+/**
+ *_isupper - checks for uppercase characters
+ *Return: i if number is a digit otherwise 0
  *@c: is number to be checked
  *
  */
-int _isdigit(int c)
+int _isupper(int c)
 {
-int c;
-int i;
-
-while (i <= 9 || i <= 0)
-{
-if (c == i)
-{
-return (i);
-}
-else
-{
-return (0);
-}
-}
+	if (c >= 65 && c <= 90)
+		return (1);
+	else
+		return (0);
 }

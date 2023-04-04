@@ -3,16 +3,16 @@
  **_memcpy - copies memory area
  *@dest: content to be cpied into
  *@src: cntent to be copied
- *Return: (0)
+ *Return: *original_dest
  *@n: size of the count
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i;
+	char *original_dest = dest;
 
-	for (i = 0; i < n; i++)
+	while (n--)
 	{
-		dest[i] = src[i];
+		*dest++ = *src++;
 	}
-	return (0);
+	return original_dest;
 }

@@ -14,3 +14,15 @@ void _print_rev_recursion(char *s)
 	putchar (*s);
 	_print_rev_recursion(s + 1);
 }
+/**
+ *main - entry point
+ *Return: 0
+ */
+int main(void)
+{
+	char s[10];
+
+	_print_rev_recursion(s);
+	putchar ('\n');
+	return (0);
+}

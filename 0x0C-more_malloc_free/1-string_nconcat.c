@@ -1,17 +1,17 @@
-#include"main.h"
 #include<stdlib.h>
+#include"main.h"
 /**
- **string_nconcat - cocatenates two strings
- *@n: size of bytes
- *@s1: first string
- *@s2: second string
- *Return: pointer to newly allocated memory
+ **string_nconcat - concatenates two strings
+ *@n: size of bytes from s2 to concatnate to s1
+ *@s1: first string to append to
+ *@s2: second string to concatenate from
+ *Return: pointer to resulting string
  *
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *s = 0;
+	char *s;
 	unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
 
 	while (s1 && s1[len1])
@@ -40,6 +40,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	s[i++] = s2[j++];
 
 	s[i] = '\0';
+
 	return (s);
 }
 

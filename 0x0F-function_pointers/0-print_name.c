@@ -17,6 +17,11 @@ void print_name(char *name, void (*f)(char *))
 	f(name);
 }
 
+/**
+ *main - entry point
+ *Return: 0
+ */
+
 int main(void)
 {
 return (0);

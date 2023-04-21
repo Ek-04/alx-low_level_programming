@@ -1,43 +1,16 @@
-#include <stdio.h>
-
-// Function that prints a name
+#include "function_pointers.h"
+#include<stdio.h>
+/**
+ *print_name - print name using pointer to function
+ *@name: string to add
+ *@f: pointer to function
+ *Return: nothing
+ *
+ */
 void print_name(char *name, void (*f)(char *))
 {
+	if (name == NULL || f == NULL)
+		return;
+
 	f(name);
 }
-
-// Function that prints name in uppercase
-
-void print_name_uppercase(char *name)
-{
-	for (int i = 0; name[i]; i++) 
-	{
-	putchar(toupper(name[i]));
-	}
-	putchar('\n');
-}
-
-// Function that prints name in lowercase
-
-void print_name_lowercase(char *name)
-{
- 	for (int i = 0; name[i]; i++)
-	{
-	putchar(tolower(name[i]));
-	}
-	putchar('\n');
-}
-
-int main() {
-	char name[] = "John Doe";
-
-	// Using print_name function with print_name_uppercase and print_name_lowercase function pointers
-	printf("Name: %s\n", name);
-	printf("Uppercase: ");
-	print_name(name, print_name_uppercase);
-	printf("Lowercase: ");
-	print_name(name, print_name_lowercase);
-
-	return 0;
-}
-
